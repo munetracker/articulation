@@ -4,163 +4,1484 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#172554">
+
 <title>365 Days of Articulation — Confident Conversations</title>
+
 <style>
-:root{--navy:#172554;--blue:#2563eb;--sky:#eff6ff;--ink:#172033;--muted:#64748b;--line:#e2e8f0;--green:#15803d;--gold:#f59e0b}
-*{box-sizing:border-box}body{margin:0;background:#f8fafc;color:var(--ink);font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
-header{background:linear-gradient(130deg,#172554,#1d4ed8);color:white;padding:38px 20px 34px}
-.wrap{max-width:1100px;margin:auto;padding:0 18px}h1{font-size:clamp(2rem,5vw,3rem);line-height:1.08;margin:0 0 12px}header p{max-width:720px;color:#dbeafe;margin:0}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:25px}.stat{background:#ffffff18;border:1px solid #ffffff30;border-radius:14px;padding:12px 15px}.stat strong{display:block;font-size:1.5rem}.stat span{font-size:.83rem;color:#dbeafe}
-main{padding:25px 0 55px}.layout{display:grid;grid-template-columns:300px 1fr;gap:20px;align-items:start}
-.panel,.lesson{background:white;border:1px solid var(--line);border-radius:18px;box-shadow:0 5px 18px #0f172a08}
-.panel{padding:18px;position:sticky;top:15px}.panel h2,.lesson h2{margin:0 0 12px;font-size:1.1rem}
-.progress-track{height:9px;background:#e2e8f0;border-radius:99px;overflow:hidden;margin:8px 0 17px}.progress-fill{height:100%;width:0;background:#22c55e;transition:width .25s}
-.controls{display:flex;gap:8px;margin:12px 0}.controls input,.controls select{min-width:0;width:100%;padding:10px;border:1px solid var(--line);border-radius:10px;background:white}
-.day-list{display:grid;grid-template-columns:repeat(5,1fr);gap:7px;max-height:440px;overflow:auto;padding:2px}
-.day-btn{border:1px solid var(--line);border-radius:9px;padding:8px 2px;background:white;cursor:pointer;color:var(--ink);font-weight:650}.day-btn:hover,.day-btn.active{border-color:var(--blue);background:var(--sky);color:#1d4ed8}.day-btn.done{background:#f0fdf4;border-color:#86efac;color:var(--green)}
-.lesson{padding:clamp(18px,4vw,30px)}.eyebrow{color:var(--blue);font-weight:750;text-transform:uppercase;letter-spacing:.09em;font-size:.76rem}
-.lesson h2{font-size:1.7rem;margin:5px 0 6px}.sub{color:var(--muted);margin:0 0 20px}
-.box{background:#f8fafc;border:1px solid var(--line);border-radius:13px;padding:16px;margin:14px 0}.box h3{font-size:1rem;margin:0 0 7px}.box p{margin:0}.prompt{font-size:1.06rem;font-weight:600}
-ul{padding-left:21px;margin:8px 0}li{margin:5px 0}.timer{display:flex;align-items:center;gap:12px;flex-wrap:wrap}.timer strong{font-size:1.6rem;font-variant-numeric:tabular-nums}
-button{font:inherit}.primary,.secondary{border:0;border-radius:10px;padding:11px 16px;cursor:pointer;font-weight:700}.primary{background:var(--blue);color:white}.primary:hover{background:#1d4ed8}.secondary{background:#e2e8f0;color:#1e293b}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
-textarea{width:100%;min-height:90px;border:1px solid var(--line);border-radius:10px;padding:12px;font:inherit;resize:vertical}.note{font-size:.88rem;color:var(--muted)}
-.tip{border-left:4px solid var(--gold);padding:10px 13px;background:#fffbeb;border-radius:0 9px 9px 0;margin:16px 0;color:#713f12}
-footer{text-align:center;color:var(--muted);font-size:.85rem;padding:0 15px 30px}
-@media(max-width:760px){.layout{grid-template-columns:1fr}.panel{position:static}.day-list{grid-template-columns:repeat(10,1fr);max-height:220px}.stats{gap:7px}.stat{padding:10px}.stat strong{font-size:1.2rem}}
-@media(max-width:420px){.day-list{grid-template-columns:repeat(7,1fr)}}
+:root{
+    --navy:#172554;
+    --blue:#2563eb;
+    --sky:#eff6ff;
+    --ink:#172033;
+    --muted:#64748b;
+    --line:#e2e8f0;
+    --green:#15803d;
+    --gold:#f59e0b;
+}
+
+*{box-sizing:border-box}
+
+body{
+    margin:0;
+    background:#f8fafc;
+    color:var(--ink);
+    font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+}
+
+header{
+    background:linear-gradient(130deg,#172554,#1d4ed8);
+    color:white;
+    padding:38px 20px 34px;
+}
+
+.wrap{
+    max-width:1100px;
+    margin:auto;
+    padding:0 18px;
+}
+
+h1{
+    font-size:clamp(2rem,5vw,3rem);
+    line-height:1.08;
+    margin:0 0 12px;
+}
+
+header p{
+    max-width:720px;
+    color:#dbeafe;
+    margin:0;
+}
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:12px;
+    margin-top:25px;
+}
+
+.stat{
+    background:#ffffff18;
+    border:1px solid #ffffff30;
+    border-radius:14px;
+    padding:12px 15px;
+}
+
+.stat strong{
+    display:block;
+    font-size:1.5rem;
+}
+
+.stat span{
+    font-size:.83rem;
+    color:#dbeafe;
+}
+
+main{padding:25px 0 55px}
+
+.layout{
+    display:grid;
+    grid-template-columns:300px minmax(0,1fr);
+    gap:20px;
+    align-items:start;
+}
+
+.panel,.lesson{
+    background:white;
+    border:1px solid var(--line);
+    border-radius:18px;
+    box-shadow:0 5px 18px #0f172a08;
+    min-width:0;
+}
+
+.panel{
+    padding:18px;
+    position:sticky;
+    top:15px;
+}
+
+.panel h2,.lesson h2{
+    margin:0 0 12px;
+    font-size:1.1rem;
+}
+
+.progress-track{
+    height:9px;
+    background:#e2e8f0;
+    border-radius:99px;
+    overflow:hidden;
+    margin:8px 0 17px;
+}
+
+.progress-fill{
+    height:100%;
+    width:0;
+    background:#22c55e;
+    transition:width .25s;
+}
+
+.controls{
+    display:flex;
+    flex-direction:column;
+    gap:9px;
+    margin:12px 0;
+}
+
+.controls input,.controls select{
+    width:100%;
+    min-width:0;
+    padding:11px;
+    border:1px solid var(--line);
+    border-radius:10px;
+    background:white;
+    font:inherit;
+}
+
+.day-list{
+    display:grid;
+    grid-template-columns:repeat(5,minmax(0,1fr));
+    gap:7px;
+    max-height:440px;
+    overflow-y:auto;
+    overflow-x:hidden;
+    padding:3px;
+    scrollbar-width:thin;
+}
+
+.day-btn{
+    min-height:38px;
+    border:1px solid var(--line);
+    border-radius:9px;
+    padding:7px 2px;
+    background:white;
+    cursor:pointer;
+    color:var(--ink);
+    font-weight:650;
+    font-size:.9rem;
+    transition:.15s;
+}
+
+.day-btn:hover,.day-btn.active{
+    border-color:var(--blue);
+    background:var(--sky);
+    color:#1d4ed8;
+}
+
+.day-btn.done{
+    background:#f0fdf4;
+    border-color:#86efac;
+    color:var(--green);
+}
+
+.day-btn.active{
+    outline:2px solid #2563eb30;
+}
+
+.lesson{
+    padding:clamp(18px,4vw,30px);
+}
+
+.eyebrow{
+    color:var(--blue);
+    font-weight:750;
+    text-transform:uppercase;
+    letter-spacing:.09em;
+    font-size:.76rem;
+}
+
+.lesson h2{
+    font-size:1.7rem;
+    margin:5px 0 6px;
+    line-height:1.25;
+}
+
+.sub{
+    color:var(--muted);
+    margin:0 0 20px;
+}
+
+.box{
+    background:#f8fafc;
+    border:1px solid var(--line);
+    border-radius:13px;
+    padding:16px;
+    margin:14px 0;
+}
+
+.box h3{
+    font-size:1rem;
+    margin:0 0 7px;
+}
+
+.box p{margin:0}
+
+.prompt{
+    font-size:1.06rem;
+    font-weight:600;
+}
+
+ul{
+    padding-left:21px;
+    margin:8px 0;
+}
+
+li{margin:5px 0}
+
+.timer{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.timer strong{
+    font-size:1.6rem;
+    font-variant-numeric:tabular-nums;
+}
+
+button{font:inherit}
+
+.primary,.secondary{
+    border:0;
+    border-radius:10px;
+    padding:11px 16px;
+    cursor:pointer;
+    font-weight:700;
+    transition:.15s;
+}
+
+.primary{
+    background:var(--blue);
+    color:white;
+}
+
+.primary:hover{background:#1d4ed8}
+
+.secondary{
+    background:#e2e8f0;
+    color:#1e293b;
+}
+
+button:disabled{
+    opacity:.4;
+    cursor:not-allowed;
+}
+
+.actions{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+    margin-top:20px;
+}
+
+textarea{
+    width:100%;
+    min-height:100px;
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:12px;
+    font:inherit;
+    resize:vertical;
+}
+
+.note{
+    font-size:.88rem;
+    color:var(--muted);
+}
+
+.tip{
+    border-left:4px solid var(--gold);
+    padding:10px 13px;
+    background:#fffbeb;
+    border-radius:0 9px 9px 0;
+    margin:16px 0;
+    color:#713f12;
+}
+
+footer{
+    text-align:center;
+    color:var(--muted);
+    font-size:.85rem;
+    padding:0 15px 30px;
+}
+
+/* TABLET */
+@media(max-width:900px){
+    .layout{
+        grid-template-columns:250px minmax(0,1fr);
+        gap:14px;
+    }
+
+    .day-list{
+        grid-template-columns:repeat(5,minmax(0,1fr));
+    }
+
+    .panel{padding:14px}
+}
+
+/* MOBILE */
+@media(max-width:760px){
+
+    header{
+        padding:28px 16px 25px;
+    }
+
+    .wrap{
+        padding:0 13px;
+    }
+
+    main{
+        padding:15px 0 35px;
+    }
+
+    .layout{
+        grid-template-columns:1fr;
+        gap:14px;
+    }
+
+    .panel{
+        position:static;
+        padding:15px;
+    }
+
+    .panel h2{
+        font-size:1.05rem;
+    }
+
+    .controls{
+        display:grid;
+        grid-template-columns:1fr;
+    }
+
+    .day-list{
+        grid-template-columns:repeat(7,minmax(0,1fr));
+        max-height:200px;
+        gap:6px;
+    }
+
+    .day-btn{
+        min-height:40px;
+        padding:7px 1px;
+        font-size:.85rem;
+    }
+
+    .lesson{
+        padding:19px 15px;
+    }
+
+    .lesson h2{
+        font-size:1.45rem;
+    }
+
+    .box{
+        padding:14px;
+        margin:11px 0;
+    }
+
+    .actions{
+        display:grid;
+        grid-template-columns:1fr;
+    }
+
+    .actions button{
+        width:100%;
+        min-height:45px;
+    }
+
+    .timer{
+        gap:9px;
+    }
+
+    .timer strong{
+        width:100%;
+        font-size:1.8rem;
+    }
+
+    .timer button{
+        flex:1;
+    }
+
+    .stats{
+        gap:7px;
+        margin-top:20px;
+    }
+
+    .stat{
+        padding:10px;
+        border-radius:10px;
+    }
+
+    .stat strong{
+        font-size:1.15rem;
+    }
+
+    .stat span{
+        font-size:.72rem;
+    }
+}
+
+/* SMALL PHONES */
+@media(max-width:380px){
+
+    .day-list{
+        grid-template-columns:repeat(6,minmax(0,1fr));
+    }
+
+    .stats{
+        grid-template-columns:repeat(3,minmax(0,1fr));
+    }
+
+    .stat strong{
+        font-size:1rem;
+    }
+
+    .stat span{
+        font-size:.68rem;
+    }
+
+    .lesson h2{
+        font-size:1.3rem;
+    }
+}
 </style>
 </head>
+
 <body>
-<header><div class="wrap">
-  <h1>365 Days of Articulation</h1>
-  <p>Build clear speech, calm confidence, and genuine conversation skills—including how to respectfully start a conversation with a woman, show interest, and handle any response with maturity.</p>
-  <div class="stats">
-    <div class="stat"><strong id="completed">0 / 365</strong><span>Days completed</span></div>
-    <div class="stat"><strong id="percent">0%</strong><span>Program progress</span></div>
-    <div class="stat"><strong id="streak">0</strong><span>Completed in a row</span></div>
-  </div>
-</div></header>
-<main class="wrap">
-<div class="layout">
-  <aside class="panel">
-    <h2>Your 365-day journey</h2>
-    <div class="progress-track"><div class="progress-fill" id="bar"></div></div>
-    <div class="controls">
-      <input id="search" type="search" placeholder="Find a day…" aria-label="Search days">
-      <select id="phase" aria-label="Filter by phase"><option value="all">All phases</option><option value="1">Days 1–30 · Voice & Foundations</option><option value="2">Days 31–60 · Vocabulary & Expression</option><option value="3">Days 61–90 · Listening & Conversation</option><option value="4">Days 91–120 · Small Talk & Social Ease</option><option value="5">Days 121–150 · Storytelling & Humor</option><option value="6">Days 151–180 · Body Language & Presence</option><option value="7">Days 181–210 · Confidence & Group Speaking</option><option value="8">Days 211–240 · Approaching & Introductions</option><option value="9">Days 241–270 · Dating Conversation Skills</option><option value="10">Days 271–300 · Boundaries & Emotional Intelligence</option><option value="11">Days 301–330 · Real-World Conversation Practice</option><option value="12">Days 331–365 · Integration & Mastery</option></select>
+
+<header>
+<div class="wrap">
+
+    <h1>365 Days of Articulation</h1>
+
+    <p>
+        Build clear speech, calm confidence, and genuine conversation skills—including how to respectfully start a conversation with a woman, show interest, and handle any response with maturity.
+    </p>
+
+    <div class="stats">
+
+        <div class="stat">
+            <strong id="completed">0 / 365</strong>
+            <span>Days completed</span>
+        </div>
+
+        <div class="stat">
+            <strong id="percent">0%</strong>
+            <span>Program progress</span>
+        </div>
+
+        <div class="stat">
+            <strong id="streak">0</strong>
+            <span>Completed in a row</span>
+        </div>
+
     </div>
-    <div class="day-list" id="dayList"></div>
-    <p class="note">Your progress and notes are saved in this browser on this device.</p>
-    <button class="secondary" id="reset" style="width:100%">Reset all progress</button>
-  </aside>
-  <section class="lesson" aria-live="polite">
-    <div class="eyebrow" id="phaseLabel">Phase 1 · Foundations</div>
-    <h2 id="title">Day 1 — Speak with intention</h2>
-    <p class="sub" id="subtitle">Start with a calm, natural speaking rhythm.</p>
-    <div class="box"><h3>Today's focus</h3><p id="focus"></p></div>
-    <div class="box"><h3>Articulation drill</h3><p id="drill"></p></div>
-    <div class="box"><h3>Conversation practice</h3><p class="prompt" id="scenario"></p><p id="example" style="margin-top:9px"></p></div>
-    <div class="box"><h3>Today's 10–15 minute routine</h3><ul id="tasks"></ul></div>
-    <div class="box"><h3>Practice timer</h3><div class="timer"><strong id="clock">02:00</strong><button class="primary" id="timerBtn">Start 2-minute practice</button><button class="secondary" id="timerReset">Reset</button></div><p class="note">Use the timer while speaking aloud. Focus on clarity, not speed.</p></div>
-    <div class="box"><h3>Reflection</h3><p class="note">What felt natural? What will you improve next time?</p><textarea id="notes" placeholder="Write a short reflection…"></textarea></div>
-    <div class="tip"><strong>Remember:</strong> The goal is connection, not persuasion. A woman is an individual, not a challenge to win. Be respectful, notice whether she seems open to talking, and accept “no” or disinterest graciously.</div>
-    <div class="actions"><button class="secondary" id="prev">← Previous day</button><button class="primary" id="complete">Mark day complete ✓</button><button class="secondary" id="next">Next day →</button></div>
-  </section>
+
+</div>
+</header>
+
+<main class="wrap">
+
+<div class="layout">
+
+    <aside class="panel">
+
+        <h2>Your 365-day journey</h2>
+
+        <div class="progress-track">
+            <div class="progress-fill" id="bar"></div>
+        </div>
+
+        <div class="controls">
+
+            <input
+                id="search"
+                type="search"
+                placeholder="Find a day..."
+                aria-label="Search days"
+            >
+
+            <select id="phase" aria-label="Filter by phase">
+                <option value="all">All phases</option>
+                <option value="1">Days 1–30 · Voice & Foundations</option>
+                <option value="2">Days 31–60 · Vocabulary & Expression</option>
+                <option value="3">Days 61–90 · Listening & Conversation</option>
+                <option value="4">Days 91–120 · Small Talk & Social Ease</option>
+                <option value="5">Days 121–150 · Storytelling & Humor</option>
+                <option value="6">Days 151–180 · Body Language & Presence</option>
+                <option value="7">Days 181–210 · Confidence & Group Speaking</option>
+                <option value="8">Days 211–240 · Approaching & Introductions</option>
+                <option value="9">Days 241–270 · Dating Conversation Skills</option>
+                <option value="10">Days 271–300 · Boundaries & Emotional Intelligence</option>
+                <option value="11">Days 301–330 · Real-World Conversation Practice</option>
+                <option value="12">Days 331–365 · Integration & Mastery</option>
+            </select>
+
+        </div>
+
+        <div class="day-list" id="dayList"></div>
+
+        <p class="note">
+            Your progress, selected day, filters, and notes are saved automatically in this browser.
+        </p>
+
+        <button class="secondary" id="reset" style="width:100%">
+            Reset all progress
+        </button>
+
+    </aside>
+
+    <section class="lesson" aria-live="polite">
+
+        <div class="eyebrow" id="phaseLabel">
+            Phase 1 · Foundations
+        </div>
+
+        <h2 id="title">Day 1 — Speak with intention</h2>
+
+        <p class="sub" id="subtitle">
+            Start with a calm, natural speaking rhythm.
+        </p>
+
+        <div class="box">
+            <h3>Today's focus</h3>
+            <p id="focus"></p>
+        </div>
+
+        <div class="box">
+            <h3>Articulation drill</h3>
+            <p id="drill"></p>
+        </div>
+
+        <div class="box">
+            <h3>Conversation practice</h3>
+            <p class="prompt" id="scenario"></p>
+            <p id="example" style="margin-top:9px"></p>
+        </div>
+
+        <div class="box">
+            <h3>Today's 10–15 minute routine</h3>
+            <ul id="tasks"></ul>
+        </div>
+
+        <div class="box">
+
+            <h3>Practice timer</h3>
+
+            <div class="timer">
+
+                <strong id="clock">02:00</strong>
+
+                <button class="primary" id="timerBtn">
+                    Start 2-minute practice
+                </button>
+
+                <button class="secondary" id="timerReset">
+                    Reset
+                </button>
+
+            </div>
+
+            <p class="note">
+                Use the timer while speaking aloud. Focus on clarity, not speed.
+            </p>
+
+        </div>
+
+        <div class="box">
+
+            <h3>Reflection</h3>
+
+            <p class="note">
+                What felt natural? What will you improve next time?
+            </p>
+
+            <textarea
+                id="notes"
+                placeholder="Write a short reflection..."
+            ></textarea>
+
+        </div>
+
+        <div class="tip">
+            <strong>Remember:</strong>
+            The goal is connection, not persuasion. A woman is an individual, not a challenge to win. Be respectful, notice whether she seems open to talking, and accept "no" or disinterest graciously.
+        </div>
+
+        <div class="actions">
+
+            <button class="secondary" id="prev">
+                ← Previous day
+            </button>
+
+            <button class="primary" id="complete">
+                Mark day complete ✓
+            </button>
+
+            <button class="secondary" id="next">
+                Next day →
+            </button>
+
+        </div>
+
+    </section>
+
 </div>
 </main>
-<footer>Small daily practice beats occasional perfection. Speak clearly, listen carefully, and stay genuine.</footer>
+
+<footer>
+    Small daily practice beats occasional perfection.
+    Speak clearly, listen carefully, and stay genuine.
+</footer>
+
 <script>
-const phases=[
- {name:"Voice & Foundations",range:"Days 1–30",goal:"Build clear pronunciation, breath control, vocal confidence, and a comfortable speaking rhythm."},
- {name:"Vocabulary & Expression",range:"Days 31–60",goal:"Express ideas with more precise words, varied sentence structures, and natural emotion."},
- {name:"Listening & Conversation",range:"Days 61–90",goal:"Listen actively, ask thoughtful questions, follow up, and make conversations feel balanced."},
- {name:"Small Talk & Social Ease",range:"Days 91–120",goal:"Become comfortable starting everyday conversations and connecting with new people."},
- {name:"Storytelling & Humor",range:"Days 121–150",goal:"Tell engaging stories, use light humor appropriately, and communicate with personality."},
- {name:"Body Language & Presence",range:"Days 151–180",goal:"Develop relaxed eye contact, open posture, attentive expression, and calm presence."},
- {name:"Confidence & Group Speaking",range:"Days 181–210",goal:"Speak up in groups, share opinions, and communicate clearly even when nervous."},
- {name:"Approaching & Introductions",range:"Days 211–240",goal:"Practice respectful, situational introductions and recognize when someone is open to talking."},
- {name:"Dating Conversation Skills",range:"Days 241–270",goal:"Show genuine interest, flirt lightly when mutual, and communicate intentions honestly."},
- {name:"Boundaries & Emotional Intelligence",range:"Days 271–300",goal:"Respect boundaries, handle disagreement, accept rejection, and respond maturely."},
- {name:"Real-World Conversation Practice",range:"Days 301–330",goal:"Apply your skills in varied everyday settings and learn from real interactions."},
- {name:"Integration & Mastery",range:"Days 331–365",goal:"Combine clear speech, confident presence, genuine curiosity, and respectful communication into your natural style."}
-];
-const focusPool=[
-"Speak slowly enough to finish each word clearly.","Use relaxed breathing and a steady voice.","Finish sentences without trailing off.","Make eye contact naturally, then look away comfortably.","Listen to understand instead of planning your next line.","Ask open-ended questions that invite more than yes or no.","Share a little about yourself instead of interviewing someone.","Use a warm greeting and a relaxed facial expression.","Notice the other person's body language and level of engagement.","Speak with confidence without trying to sound impressive."
-];
-const drills=[
-"Read a paragraph aloud for two minutes. Open your mouth enough to pronounce each syllable; avoid rushing.",
-"Repeat slowly: “Clear words create clear conversations.” Then say it at a natural pace without losing clarity.",
-"Practice pausing briefly between ideas. Record yourself and listen for rushed or unclear words.",
-"Read five sentences aloud, emphasizing one important word in each sentence. Keep the emphasis natural.",
-"Practice a relaxed 4-second inhale and 6-second exhale, then speak one sentence on a comfortable breath.",
-"Say your name, what you do, and one interest in 20 seconds. Keep it conversational, not memorized.",
-"Read aloud with a slight smile. Keep your voice warm without forcing an artificial tone.",
-"Practice ending statements with a calm, clear finish rather than turning every statement into a question.",
-"Choose five words you often stumble over. Pronounce them slowly, then use each in a sentence.",
-"Tell a short story in 30 seconds: beginning, interesting detail, and ending."
-];
-const scenarios=[
-["You are at a café and someone is standing near the menu. Practice a brief, situational opener.","“Hi. Have you tried anything here that you would recommend?”"],
-["You are introduced to a woman by a mutual friend. Practice a friendly introduction.","“Hi, I’m ____. Nice to meet you. How do you know ____?”"],
-["You are at a community event. Start a conversation based on the shared setting.","“Hi, what brought you to this event?”"],
-["You notice someone reading a book in a public social space. Practice a low-pressure opener only if the setting feels appropriate.","“That book caught my attention. Are you enjoying it?”"],
-["You are talking with someone who gives short answers. Practice recognizing that she may not want to continue.","“No worries. It was nice meeting you. Enjoy your day.”"],
-["You have been chatting comfortably. Practice sharing something about yourself and inviting her perspective.","“I’ve been getting into ____. What do you enjoy doing outside work or school?”"],
-["You want to express interest clearly without putting pressure on her.","“I’ve enjoyed talking with you. Would you be interested in getting coffee sometime? No pressure.”"],
-["She says she is not interested. Practice a respectful response without asking her to justify it.","“Thanks for being honest. Take care, and have a good day.”"],
-["You want to continue a conversation by listening to the answer.","“What got you interested in that?” Then listen and ask one relevant follow-up."],
-["You are ending a pleasant conversation because you both need to go.","“It was really nice talking with you. Hope you enjoy the rest of your day.”"]
-];
-const tasksBase=["Warm up: breathe slowly and read aloud for 2 minutes.","Complete the articulation drill for 3 minutes.","Practice the conversation prompt aloud 3 times, using your own words.","Record a 30–60 second response and listen once. Identify one improvement.","Write one sentence about what you learned."];
-const titles=[
-"Speak with intention","Find your natural pace","Pronounce the ending","Breathe before speaking","Use comfortable volume","Introduce yourself","Make pauses useful","Finish your sentences","Build vocal warmth","Tell a short story",
-"Listen without interrupting","Ask open questions","Follow up naturally","Share, don't interview","Reflect what you heard","Use a person's name naturally","Show genuine curiosity","Avoid one-word replies","Find common ground","Summarize a conversation"
-];
-const dayData=Array.from({length:365},(_,i)=>{
- const phase=Math.min(11,Math.floor(i/30)),n=i+1;
- let title,focus,drill,scenario,example;
- const skillTitles=[
-  ["Find your natural pace","Pronounce every syllable","Use breath support","Finish words clearly","Speak at a steady volume","Pause between ideas","Warm up your voice","Reduce filler words","Read with expression","Record your baseline"],
-  ["Choose precise words","Replace vague phrases","Describe a place vividly","Explain an idea simply","Use transition phrases","Practice concise answers","Expand your vocabulary","Avoid overcomplicated words","Express opinions clearly","Summarize in your own words"],
-  ["Listen without interrupting","Ask open-ended questions","Use thoughtful follow-ups","Reflect what you heard","Notice key details","Share a related experience","Balance speaking and listening","Ask for clarification","Show genuine curiosity","Close a conversation warmly"],
-  ["Give a relaxed greeting","Start with the situation","Practice friendly small talk","Talk about shared interests","Introduce yourself naturally","Ask about someone's day","Handle a quiet moment","Keep a conversation balanced","Exit politely","Start a conversation in public appropriately"],
-  ["Tell a story with a beginning","Add a useful detail","Make the point clear","Use sensory descriptions","Practice a light anecdote","Use humor kindly","Avoid talking over others","Tell a story in one minute","Make explanations engaging","Share a meaningful experience"],
-  ["Relax your shoulders","Practice natural eye contact","Use open posture","Match your facial expression","Keep a comfortable distance","Use natural hand gestures","Notice the other person's comfort","Avoid staring","Show attentive listening","Practice calm presence"],
-  ["Share an opinion respectfully","Speak in a small group","Disagree without hostility","Make a short announcement","Answer an unexpected question","Speak despite nervousness","Organize your thoughts quickly","Contribute without dominating","Give a brief introduction","Present an idea in two minutes"],
-  ["Introduce yourself to someone new","Open with a shared context","Approach without interrupting","Choose an appropriate moment","Keep the opener simple","Read signs of engagement","Avoid rehearsed pickup lines","Respect personal space","End a brief chat gracefully","Practice a confident introduction"],
-  ["Give a sincere compliment","Ask about her interests","Share your own interests","Express interest honestly","Invite without pressure","Flirt lightly and respectfully","Notice whether interest is mutual","Suggest a simple date","Keep early conversation relaxed","Communicate your intentions clearly"],
-  ["Accept a different opinion","Respect a personal boundary","Respond calmly to no","Avoid pressuring for an answer","Apologize without excuses","Handle awkward moments","Recognize discomfort","Manage nervousness","Be honest without oversharing","Show emotional maturity"],
-  ["Talk with someone new","Practice a café conversation","Chat at a community event","Speak with a classmate or colleague","Ask a thoughtful question","Practice a friendly introduction","Reflect on a real interaction","Try a new conversation setting","Listen more than you speak","Celebrate a small improvement"],
-  ["Combine voice and presence","Tell a clear two-minute story","Start and sustain a conversation","Ask and answer naturally","Show interest without performing","Speak clearly under pressure","Use your own conversational style","Review your strongest skills","Record your progress","Your 365-day assessment"]
- ];
- const group=skillTitles[phase];
- title=group[(i%30)%group.length];
- focus=focusPool[(i+phase)%focusPool.length];
- drill=drills[(i+phase*2)%drills.length];
- const sc=scenarios[i%scenarios.length];
- scenario=sc[0];example="Example: "+sc[1];
- if(i===364){title="Your 365-day assessment";focus="Compare your speaking today with Day 1. Notice clearer pronunciation, calmer delivery, better listening, and more respectful confidence.";drill="Record a two-minute introduction and a two-minute sample conversation. Compare it with an early recording. Choose three skills to keep practicing.";scenario="In your own words, introduce yourself, start a conversation, ask thoughtful questions, express interest respectfully, and close the conversation.";example="There is no perfect script. Aim to sound clear, warm, curious, and genuine.";}
- return {n,phase,title,focus,drill,scenario,example};
-});
-const $=id=>document.getElementById(id);
-let current=1,done=JSON.parse(localStorage.getItem("articulationDone")||"[]"),notes=JSON.parse(localStorage.getItem("articulationNotes")||"{}"),seconds=120,interval=null;
-function save(){localStorage.setItem("articulationDone",JSON.stringify(done));localStorage.setItem("articulationNotes",JSON.stringify(notes));}
-function renderList(){const q=$("search").value.toLowerCase(),p=$("phase").value;const list=$("dayList");list.innerHTML="";
- dayData.forEach(d=>{if(p!=="all"&&Number(p)!==d.phase+1)return;if(q&&!(`${d.n} ${d.title} ${phases[d.phase].name}`.toLowerCase().includes(q)))return;
- const b=document.createElement("button");b.className="day-btn"+(done.includes(d.n)?" done":"")+(d.n===current?" active":"");b.textContent=d.n;b.title=`Day ${d.n}: ${d.title}`;b.onclick=()=>selectDay(d.n);list.appendChild(b);});
+
+/* =====================================
+   PHASES
+===================================== */
+
+const phases = [
+
+{
+name:"Voice & Foundations",
+range:"Days 1–30",
+goal:"Build clear pronunciation, breath control, vocal confidence, and a comfortable speaking rhythm."
+},
+
+{
+name:"Vocabulary & Expression",
+range:"Days 31–60",
+goal:"Express ideas with more precise words, varied sentence structures, and natural emotion."
+},
+
+{
+name:"Listening & Conversation",
+range:"Days 61–90",
+goal:"Listen actively, ask thoughtful questions, follow up, and make conversations feel balanced."
+},
+
+{
+name:"Small Talk & Social Ease",
+range:"Days 91–120",
+goal:"Become comfortable starting everyday conversations and connecting with new people."
+},
+
+{
+name:"Storytelling & Humor",
+range:"Days 121–150",
+goal:"Tell engaging stories, use light humor appropriately, and communicate with personality."
+},
+
+{
+name:"Body Language & Presence",
+range:"Days 151–180",
+goal:"Develop relaxed eye contact, open posture, attentive expression, and calm presence."
+},
+
+{
+name:"Confidence & Group Speaking",
+range:"Days 181–210",
+goal:"Speak up in groups, share opinions, and communicate clearly even when nervous."
+},
+
+{
+name:"Approaching & Introductions",
+range:"Days 211–240",
+goal:"Practice respectful, situational introductions and recognize when someone is open to talking."
+},
+
+{
+name:"Dating Conversation Skills",
+range:"Days 241–270",
+goal:"Show genuine interest, flirt lightly when mutual, and communicate intentions honestly."
+},
+
+{
+name:"Boundaries & Emotional Intelligence",
+range:"Days 271–300",
+goal:"Respect boundaries, handle disagreement, accept rejection, and respond maturely."
+},
+
+{
+name:"Real-World Conversation Practice",
+range:"Days 301–330",
+goal:"Apply your skills in varied everyday settings and learn from real interactions."
+},
+
+{
+name:"Integration & Mastery",
+range:"Days 331–365",
+goal:"Combine clear speech, confident presence, genuine curiosity, and respectful communication into your natural style."
 }
-function updateStats(){const count=done.length;$("completed").textContent=`${count} / 365`;$("percent").textContent=`${Math.round(count/365*100)}%`;$("bar").style.width=(count/365*100)+"%";let streak=0;for(let n=current;n>=1&&done.includes(n);n--)streak++;$("streak").textContent=streak;}
-function selectDay(n){current=Math.max(1,Math.min(365,n));const d=dayData[current-1],p=phases[d.phase];$("phaseLabel").textContent=`Phase ${d.phase+1} · ${p.name} (${p.range})`;$("title").textContent=`Day ${d.n} — ${d.title}`;$("subtitle").textContent=p.goal;$("focus").textContent=d.focus;$("drill").textContent=d.drill;$("scenario").textContent=d.scenario;$("example").textContent=d.example;$("tasks").innerHTML=tasksBase.map(x=>`<li>${x}</li>`).join("");$("notes").value=notes[current]||"";$("complete").textContent=done.includes(current)?"Completed ✓ — Mark incomplete":"Mark day complete ✓";$("prev").disabled=current===1;$("next").disabled=current===365;resetTimer();renderList();updateStats();}
-$("notes").addEventListener("input",()=>{notes[current]=$("notes").value;save();});
-$("complete").onclick=()=>{done=done.includes(current)?done.filter(x=>x!==current):[...done,current].sort((a,b)=>a-b);save();selectDay(current);};
-$("prev").onclick=()=>selectDay(current-1);$("next").onclick=()=>selectDay(current+1);
-$("search").oninput=renderList;$("phase").onchange=renderList;
-$("reset").onclick=()=>{if(confirm("Reset all completed days and reflections? This cannot be undone.")){done=[];notes={};save();selectDay(1);}};
-function showClock(){$("clock").textContent=`${String(Math.floor(seconds/60)).padStart(2,"0")}:${String(seconds%60).padStart(2,"0")}`;}
-function resetTimer(){clearInterval(interval);interval=null;seconds=120;showClock();$("timerBtn").textContent="Start 2-minute practice";}
-$("timerBtn").onclick=()=>{if(interval){clearInterval(interval);interval=null;$("timerBtn").textContent="Resume practice";return;}if(seconds<=0)seconds=120;$("timerBtn").textContent="Pause";interval=setInterval(()=>{seconds--;showClock();if(seconds<=0){clearInterval(interval);interval=null;$("timerBtn").textContent="Start again";}},1000);};
+
+];
+
+
+/* =====================================
+   FOCUS POOL
+===================================== */
+
+const focusPool = [
+
+"Speak slowly enough to finish each word clearly.",
+"Use relaxed breathing and a steady voice.",
+"Finish sentences without trailing off.",
+"Make eye contact naturally, then look away comfortably.",
+"Listen to understand instead of planning your next line.",
+"Ask open-ended questions that invite more than yes or no.",
+"Share a little about yourself instead of interviewing someone.",
+"Use a warm greeting and a relaxed facial expression.",
+"Notice the other person's body language and level of engagement.",
+"Speak with confidence without trying to sound impressive."
+
+];
+
+
+/* =====================================
+   ARTICULATION DRILLS
+===================================== */
+
+const drills = [
+
+"Read a paragraph aloud for two minutes. Open your mouth enough to pronounce each syllable; avoid rushing.",
+
+"Repeat slowly: 'Clear words create clear conversations.' Then say it at a natural pace without losing clarity.",
+
+"Practice pausing briefly between ideas. Record yourself and listen for rushed or unclear words.",
+
+"Read five sentences aloud, emphasizing one important word in each sentence. Keep the emphasis natural.",
+
+"Practice a relaxed 4-second inhale and 6-second exhale, then speak one sentence on a comfortable breath.",
+
+"Say your name, what you do, and one interest in 20 seconds. Keep it conversational, not memorized.",
+
+"Read aloud with a slight smile. Keep your voice warm without forcing an artificial tone.",
+
+"Practice ending statements with a calm, clear finish rather than turning every statement into a question.",
+
+"Choose five words you often stumble over. Pronounce them slowly, then use each in a sentence.",
+
+"Tell a short story in 30 seconds: beginning, interesting detail, and ending."
+
+];
+
+
+/* =====================================
+   CONVERSATION SCENARIOS
+===================================== */
+
+const scenarios = [
+
+[
+"You are at a café and someone is standing near the menu. Practice a brief, situational opener.",
+"Hi. Have you tried anything here that you would recommend?"
+],
+
+[
+"You are introduced to a woman by a mutual friend. Practice a friendly introduction.",
+"Hi, I'm ____. Nice to meet you. How do you know ____?"
+],
+
+[
+"You are at a community event. Start a conversation based on the shared setting.",
+"Hi, what brought you to this event?"
+],
+
+[
+"You notice someone reading a book in a public social space. Practice a low-pressure opener only if the setting feels appropriate.",
+"That book caught my attention. Are you enjoying it?"
+],
+
+[
+"You are talking with someone who gives short answers. Practice recognizing that she may not want to continue.",
+"No worries. It was nice meeting you. Enjoy your day."
+],
+
+[
+"You have been chatting comfortably. Practice sharing something about yourself and inviting her perspective.",
+"I've been getting into ____. What do you enjoy doing outside work or school?"
+],
+
+[
+"You want to express interest clearly without putting pressure on her.",
+"I've enjoyed talking with you. Would you be interested in getting coffee sometime? No pressure."
+],
+
+[
+"She says she is not interested. Practice a respectful response without asking her to justify it.",
+"Thanks for being honest. Take care, and have a good day."
+],
+
+[
+"You want to continue a conversation by listening to the answer.",
+"What got you interested in that? Then listen and ask one relevant follow-up."
+],
+
+[
+"You are ending a pleasant conversation because you both need to go.",
+"It was really nice talking with you. Hope you enjoy the rest of your day."
+]
+
+];
+
+
+/* =====================================
+   DAILY ROUTINE
+===================================== */
+
+const tasksBase = [
+
+"Warm up: breathe slowly and read aloud for 2 minutes.",
+
+"Complete the articulation drill for 3 minutes.",
+
+"Practice the conversation prompt aloud 3 times, using your own words.",
+
+"Record a 30–60 second response and listen once. Identify one improvement.",
+
+"Write one sentence about what you learned."
+
+];
+
+
+/* =====================================
+   DAILY TITLES
+===================================== */
+
+const skillTitles = [
+
+[
+"Find your natural pace",
+"Pronounce every syllable",
+"Use breath support",
+"Finish words clearly",
+"Speak at a steady volume",
+"Pause between ideas",
+"Warm up your voice",
+"Reduce filler words",
+"Read with expression",
+"Record your baseline"
+],
+
+[
+"Choose precise words",
+"Replace vague phrases",
+"Describe a place vividly",
+"Explain an idea simply",
+"Use transition phrases",
+"Practice concise answers",
+"Expand your vocabulary",
+"Avoid overcomplicated words",
+"Express opinions clearly",
+"Summarize in your own words"
+],
+
+[
+"Listen without interrupting",
+"Ask open-ended questions",
+"Use thoughtful follow-ups",
+"Reflect what you heard",
+"Notice key details",
+"Share a related experience",
+"Balance speaking and listening",
+"Ask for clarification",
+"Show genuine curiosity",
+"Close a conversation warmly"
+],
+
+[
+"Give a relaxed greeting",
+"Start with the situation",
+"Practice friendly small talk",
+"Talk about shared interests",
+"Introduce yourself naturally",
+"Ask about someone's day",
+"Handle a quiet moment",
+"Keep a conversation balanced",
+"Exit politely",
+"Start a conversation in public appropriately"
+],
+
+[
+"Tell a story with a beginning",
+"Add a useful detail",
+"Make the point clear",
+"Use sensory descriptions",
+"Practice a light anecdote",
+"Use humor kindly",
+"Avoid talking over others",
+"Tell a story in one minute",
+"Make explanations engaging",
+"Share a meaningful experience"
+],
+
+[
+"Relax your shoulders",
+"Practice natural eye contact",
+"Use open posture",
+"Match your facial expression",
+"Keep a comfortable distance",
+"Use natural hand gestures",
+"Notice the other person's comfort",
+"Avoid staring",
+"Show attentive listening",
+"Practice calm presence"
+],
+
+[
+"Share an opinion respectfully",
+"Speak in a small group",
+"Disagree without hostility",
+"Make a short announcement",
+"Answer an unexpected question",
+"Speak despite nervousness",
+"Organize your thoughts quickly",
+"Contribute without dominating",
+"Give a brief introduction",
+"Present an idea in two minutes"
+],
+
+[
+"Introduce yourself to someone new",
+"Open with a shared context",
+"Approach without interrupting",
+"Choose an appropriate moment",
+"Keep the opener simple",
+"Read signs of engagement",
+"Avoid rehearsed pickup lines",
+"Respect personal space",
+"End a brief chat gracefully",
+"Practice a confident introduction"
+],
+
+[
+"Give a sincere compliment",
+"Ask about her interests",
+"Share your own interests",
+"Express interest honestly",
+"Invite without pressure",
+"Flirt lightly and respectfully",
+"Notice whether interest is mutual",
+"Suggest a simple date",
+"Keep early conversation relaxed",
+"Communicate your intentions clearly"
+],
+
+[
+"Accept a different opinion",
+"Respect a personal boundary",
+"Respond calmly to no",
+"Avoid pressuring for an answer",
+"Apologize without excuses",
+"Handle awkward moments",
+"Recognize discomfort",
+"Manage nervousness",
+"Be honest without oversharing",
+"Show emotional maturity"
+],
+
+[
+"Talk with someone new",
+"Practice a café conversation",
+"Chat at a community event",
+"Speak with a classmate or colleague",
+"Ask a thoughtful question",
+"Practice a friendly introduction",
+"Reflect on a real interaction",
+"Try a new conversation setting",
+"Listen more than you speak",
+"Celebrate a small improvement"
+],
+
+[
+"Combine voice and presence",
+"Tell a clear two-minute story",
+"Start and sustain a conversation",
+"Ask and answer naturally",
+"Show interest without performing",
+"Speak clearly under pressure",
+"Use your own conversational style",
+"Review your strongest skills",
+"Record your progress",
+"Your 365-day assessment"
+]
+
+];
+
+
+/* =====================================
+   GENERATE 365 DAYS
+===================================== */
+
+const dayData = Array.from({length:365},(_,i)=>{
+
+    const phase = Math.min(11,Math.floor(i/30));
+
+    const n = i+1;
+
+    const group = skillTitles[phase];
+
+    let title = group[(i%30)%group.length];
+
+    let focus = focusPool[(i+phase)%focusPool.length];
+
+    let drill = drills[(i+phase*2)%drills.length];
+
+    const sc = scenarios[i%scenarios.length];
+
+    let scenario = sc[0];
+
+    let example = "Example: "+sc[1];
+
+    if(i===364){
+
+        title = "Your 365-day assessment";
+
+        focus = "Compare your speaking today with Day 1. Notice clearer pronunciation, calmer delivery, better listening, and more respectful confidence.";
+
+        drill = "Record a two-minute introduction and a two-minute sample conversation. Compare it with an early recording. Choose three skills to keep practicing.";
+
+        scenario = "In your own words, introduce yourself, start a conversation, ask thoughtful questions, express interest respectfully, and close the conversation.";
+
+        example = "There is no perfect script. Aim to sound clear, warm, curious, and genuine.";
+
+    }
+
+    return {
+        n,
+        phase,
+        title,
+        focus,
+        drill,
+        scenario,
+        example
+    };
+
+});
+
+
+/* =====================================
+   LOCAL STORAGE
+===================================== */
+
+const STORAGE = {
+
+    done:"articulationDone",
+
+    notes:"articulationNotes",
+
+    current:"articulationCurrentDay",
+
+    search:"articulationSearch",
+
+    phase:"articulationPhase"
+
+};
+
+const $ = id => document.getElementById(id);
+
+
+/* SAFE STORAGE LOADING */
+
+function loadStorage(key,fallback){
+
+    try{
+
+        const value = localStorage.getItem(key);
+
+        return value === null ? fallback : JSON.parse(value);
+
+    }catch(error){
+
+        console.error("Storage loading error:",error);
+
+        return fallback;
+
+    }
+
+}
+
+
+/* APPLICATION STATE */
+
+let current = Number(loadStorage(STORAGE.current,1));
+
+if(!Number.isInteger(current) || current<1 || current>365){
+
+    current=1;
+
+}
+
+let done = loadStorage(STORAGE.done,[]);
+
+if(!Array.isArray(done)) done=[];
+
+done = [...new Set(done.filter(n=>Number.isInteger(n)&&n>=1&&n<=365))];
+
+let notes = loadStorage(STORAGE.notes,{});
+
+if(!notes || typeof notes!=="object" || Array.isArray(notes)){
+
+    notes={};
+
+}
+
+let seconds=120;
+
+let interval=null;
+
+
+/* =====================================
+   SAVE EVERYTHING
+===================================== */
+
+function save(){
+
+    localStorage.setItem(STORAGE.done,JSON.stringify(done));
+
+    localStorage.setItem(STORAGE.notes,JSON.stringify(notes));
+
+    localStorage.setItem(STORAGE.current,JSON.stringify(current));
+
+}
+
+
+/* =====================================
+   RENDER DAY NAVIGATION
+===================================== */
+
+function renderList(){
+
+    const q=$("search").value.toLowerCase();
+
+    const p=$("phase").value;
+
+    const list=$("dayList");
+
+    list.innerHTML="";
+
+    dayData.forEach(d=>{
+
+        if(p!=="all" && Number(p)!==d.phase+1) return;
+
+        const searchText=`${d.n} ${d.title} ${phases[d.phase].name}`.toLowerCase();
+
+        if(q && !searchText.includes(q)) return;
+
+        const b=document.createElement("button");
+
+        b.className="day-btn";
+
+        if(done.includes(d.n)){
+
+            b.classList.add("done");
+
+        }
+
+        if(d.n===current){
+
+            b.classList.add("active");
+
+        }
+
+        b.textContent=d.n;
+
+        b.title=`Day ${d.n}: ${d.title}`;
+
+        b.setAttribute("aria-label",`Day ${d.n}: ${d.title}`);
+
+        b.setAttribute("aria-current",d.n===current?"date":"false");
+
+        b.onclick=()=>selectDay(d.n);
+
+        list.appendChild(b);
+
+    });
+
+}
+
+
+/* =====================================
+   UPDATE STATISTICS
+===================================== */
+
+function updateStats(){
+
+    const count=done.length;
+
+    $("completed").textContent=`${count} / 365`;
+
+    $("percent").textContent=`${Math.round(count/365*100)}%`;
+
+    $("bar").style.width=(count/365*100)+"%";
+
+    let streak=0;
+
+    for(let n=current;n>=1&&done.includes(n);n--){
+
+        streak++;
+
+    }
+
+    $("streak").textContent=streak;
+
+}
+
+
+/* =====================================
+   SELECT DAY
+===================================== */
+
+function selectDay(n){
+
+    current=Math.max(1,Math.min(365,n));
+
+    // SAVE SELECTED DAY IMMEDIATELY
+    localStorage.setItem(STORAGE.current,JSON.stringify(current));
+
+    const d=dayData[current-1];
+
+    const p=phases[d.phase];
+
+    $("phaseLabel").textContent=
+        `Phase ${d.phase+1} · ${p.name} (${p.range})`;
+
+    $("title").textContent=
+        `Day ${d.n} — ${d.title}`;
+
+    $("subtitle").textContent=p.goal;
+
+    $("focus").textContent=d.focus;
+
+    $("drill").textContent=d.drill;
+
+    $("scenario").textContent=d.scenario;
+
+    $("example").textContent=d.example;
+
+    $("tasks").innerHTML=tasksBase
+        .map(x=>`<li>${x}</li>`)
+        .join("");
+
+    $("notes").value=notes[current]||"";
+
+    $("complete").textContent=
+        done.includes(current)
+        ? "Completed ✓ — Mark incomplete"
+        : "Mark day complete ✓";
+
+    $("prev").disabled=current===1;
+
+    $("next").disabled=current===365;
+
+    resetTimer();
+
+    renderList();
+
+    updateStats();
+
+}
+
+
+/* =====================================
+   NOTES AUTOSAVE
+===================================== */
+
+$("notes").addEventListener("input",()=>{
+
+    notes[current]=$("notes").value;
+
+    save();
+
+});
+
+
+/* =====================================
+   COMPLETE DAY
+===================================== */
+
+$("complete").onclick=()=>{
+
+    if(done.includes(current)){
+
+        done=done.filter(x=>x!==current);
+
+    }else{
+
+        done.push(current);
+
+        done.sort((a,b)=>a-b);
+
+    }
+
+    save();
+
+    selectDay(current);
+
+};
+
+
+/* =====================================
+   PREVIOUS / NEXT
+===================================== */
+
+$("prev").onclick=()=>{
+
+    if(current>1){
+
+        selectDay(current-1);
+
+    }
+
+};
+
+$("next").onclick=()=>{
+
+    if(current<365){
+
+        selectDay(current+1);
+
+    }
+
+};
+
+
+/* =====================================
+   SEARCH AND PHASE FILTER
+===================================== */
+
+$("search").value=loadStorage(STORAGE.search,"");
+
+$("phase").value=loadStorage(STORAGE.phase,"all");
+
+$("search").addEventListener("input",()=>{
+
+    localStorage.setItem(STORAGE.search,JSON.stringify($("search").value));
+
+    renderList();
+
+});
+
+$("phase").addEventListener("change",()=>{
+
+    localStorage.setItem(STORAGE.phase,JSON.stringify($("phase").value));
+
+    renderList();
+
+});
+
+
+/* =====================================
+   RESET PROGRESS
+===================================== */
+
+$("reset").onclick=()=>{
+
+    if(confirm("Reset all completed days, selected day, and reflections? This cannot be undone.")){
+
+        done=[];
+
+        notes={};
+
+        current=1;
+
+        save();
+
+        localStorage.removeItem(STORAGE.search);
+
+        localStorage.removeItem(STORAGE.phase);
+
+        $("search").value="";
+
+        $("phase").value="all";
+
+        selectDay(1);
+
+    }
+
+};
+
+
+/* =====================================
+   TIMER
+===================================== */
+
+function showClock(){
+
+    $("clock").textContent=
+        `${String(Math.floor(seconds/60)).padStart(2,"0")}:${String(seconds%60).padStart(2,"0")}`;
+
+}
+
+
+function resetTimer(){
+
+    clearInterval(interval);
+
+    interval=null;
+
+    seconds=120;
+
+    showClock();
+
+    $("timerBtn").textContent="Start 2-minute practice";
+
+}
+
+
+$("timerBtn").onclick=()=>{
+
+    if(interval){
+
+        clearInterval(interval);
+
+        interval=null;
+
+        $("timerBtn").textContent="Resume practice";
+
+        return;
+
+    }
+
+    if(seconds<=0){
+
+        seconds=120;
+
+    }
+
+    $("timerBtn").textContent="Pause";
+
+    interval=setInterval(()=>{
+
+        seconds--;
+
+        showClock();
+
+        if(seconds<=0){
+
+            clearInterval(interval);
+
+            interval=null;
+
+            $("timerBtn").textContent="Start again";
+
+        }
+
+    },1000);
+
+};
+
+
 $("timerReset").onclick=resetTimer;
-selectDay(1);
+
+
+/* =====================================
+   RESTORE LAST SESSION
+===================================== */
+
+// Restore selected day, notes, progress and filters.
+
+selectDay(current);
+
 </script>
+
 </body>
 </html>
